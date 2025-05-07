@@ -5,7 +5,7 @@ include 'functions.php';
 
 $user_name = isset($_SESSION['name']) ? $_SESSION['name'] : 'Guest';
 
-// Get all products with their stock information
+// Get all products with their stock information munna
 $sql = "SELECT p.ProductID, p.Product_Name, p.Description, p.Price, p.product_image, p.Category, i.Stock 
         FROM product p 
         LEFT JOIN inventory i ON p.ProductID = i.ProductID";
