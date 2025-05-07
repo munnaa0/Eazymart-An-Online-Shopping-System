@@ -129,11 +129,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
             <div class="info-grid">
               <div class="info-item">
                 <label>First Name</label>
-                <input type="text" name="first_name" value="<?php echo $first_name; ?>" readonly>
+                <input type="text" name="first_name" value="<?php echo $first_name; ?>" readonly pattern="[A-Za-z\s]+" title="Please enter only letters">
               </div>
               <div class="info-item">
                 <label>Last Name</label>
-                <input type="text" name="last_name" value="<?php echo $last_name; ?>" readonly>
+                <input type="text" name="last_name" value="<?php echo $last_name; ?>" readonly pattern="[A-Za-z\s]+" title="Please enter only letters">
               </div>
               <div class="info-item">
                 <label>Email</label>
@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
               </div>
               <div class="info-item">
                 <label>Phone</label>
-                <input type="number" name="phone" value="<?php echo $phone; ?>" readonly>
+                <input type="tel" name="phone" value="<?php echo $phone; ?>" readonly maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11)">
               </div>
               <div class="info-item full-width">
                 <label>Address</label>
