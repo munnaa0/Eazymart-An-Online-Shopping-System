@@ -1,0 +1,141 @@
+/* Profile Page Styles */
+.profile-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.profile-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-header .profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4caf50;
+}
+
+.profile-header .profile-info {
+  flex: 1;
+}
+
+.profile-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 1.75rem;
+}
+
+.profile-header p {
+  margin: 0.5rem 0 0;
+  color: #666;
+}
+
+.edit-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+  height: fit-content;
+}
+
+.edit-btn:hover {
+  background: #45a049;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-item label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.info-item input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background: #f8f9fa;
+  transition: all 0.2s;
+}
+
+.info-item input:focus {
+  outline: none;
+  border-color: #4caf50;
+  background: white;
+}
+
+.info-item input[readonly] {
+  background: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.save-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  display: block;
+  margin-left: auto;
+}
+
+.save-btn:hover {
+  background: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .profile-header .edit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

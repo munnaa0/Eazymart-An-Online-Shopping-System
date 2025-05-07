@@ -1,0 +1,150 @@
+/* Filters Section */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group h3 {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.filter-group select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Sort Filter */
+.sort-filter {
+  display: flex;
+  gap: 8px;
+}
+
+/* Filter Buttons */
+.filter-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.filter-btn:hover {
+  background: #f0f0f0;
+}
+
+.filter-btn.active {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.product {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.product h3 {
+  margin: 8px 0;
+  color: #333;
+}
+
+.product .price {
+  color: #2c3e50;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.product .stock {
+  margin: 8px 0;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.product .stock.in-stock {
+  color: #27ae60;
+}
+
+.product .stock.out-of-stock {
+  color: #e74c3c;
+}
+
+.product button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.product button:hover {
+  background: #45a049;
+}
+
+.no-products {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 16px;
+  color: #7f8c8d;
+  font-size: 1.2em;
+}
